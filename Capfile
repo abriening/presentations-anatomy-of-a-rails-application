@@ -1,5 +1,5 @@
 load 'deploy'
-set :application, "presentations-git"
+set :application, "presentations-anatomy-of-rails"
 set :deploy_to, "/var/www/#{application}"
 set :repository, Dir.pwd
 set :deploy_via, :copy

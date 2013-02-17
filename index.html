@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Title</title>
+    <title>Anatomy of a Ruby on Rails Application</title>
 
-    <meta name="description" content="Description">
+    <meta name="description" content="An introduction to software development using the Ruby on Rails framework.">
     <meta name="author" content="Andrew Briening (abriening)">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +34,188 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+        <section>
+           <blockquote cite="http://rubyonrails.org/quotes">It is impossible not to notice Ruby on Rails. It has had a huge effect both in and outside the Ruby community&#8230; Rails has become a standard to which even well-established tools are comparing themselves to.</blockquote>
+          <p><em>~ Martin Fowler, Author of Refactoring, PoEAA, XP Explained</em></p>
+        </section>
+
+        <section>
+          <h1>Anatomy of a Ruby on Rails Application</h1>
+          <h3>An introduction to software development using the Ruby on Rails framework</h3>
+          <p>
+            <small>Andrew Briening <a href="https://github.com/abriening">(abriening)</a></small>
+          </p>
+          <img src="images/rails-small.png"/>
+        </section>
+
+        <section>
+          <h2>Content</h2>
+          <ul>
+            <li>What is Ruby?</li>
+            <li>What is Rails?</li>
+            <li>Why should I care?</li>
+            <li>Creating a Rails project (code examples)</li>
+            <li>Tools &amp; Techniques</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Rails is an application framework</h2>
+          <ul>
+            <li>For building web-browser-based applications</li>
+            <li>For building REST APIs</li>
+            <li>Tools to ease development of these applications</li>
+            <li>Easy to extend the functionality for custom features</li>
+            <li>Convention over configuration</li>
+            <li>&#8230;</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ruby is the language</h2>
+          <ul>
+            <li>Object Oriented</li>
+            <li>Dynamic language (interpreted, not statically typed)</li>
+            <li>Principled (POLA, KISS)</li>
+            <li>&#8230;</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why should I care?</h2>
+          <ul>
+            <li>Community</li>
+            <li>Open-source</li>
+            <li>Promoting security best practices</li>
+            <li>Promoting development best practices</li>
+            <li>&#8230;</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's create a new application</h2>
+          <pre><code>
+
+
+
+                        rails new [project]
+
+
+
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Rails Skeleton - /[folders]</h2>
+<pre><code>
+├── app
+├── config
+├── db
+├── lib
+├── log
+├── public
+├── script
+├── test
+├── tmp
+└── vendor
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Rails Skeleton - /[files]</h2>
+<pre><code>
+├── Gemfile
+├── Gemfile.lock
+├── README.{rdoc,md,textile}
+├── Rakefile
+└── config.ru
+</code></pre>
+        </section>
+        <section>
+          <h2>Rails Skeleton - /app</h2>
+<pre><code>
+├── app
+│   ├── assets
+│   │   ├── images
+│   │   ├── javascripts
+│   │   └── stylesheets
+│   ├── controllers
+│   ├── helpers
+│   ├── mailers
+│   ├── models
+│   └── views
+│       ├── layouts
+│       │   └── application.html.erb
+│       └── ...
+</code></pre>
+        </section>
+
+
+        <section>
+          <h2>Rails Skeleton - /config</h2>
+<pre><code>
+├── config
+│   ├── application.rb
+│   ├── boot.rb
+│   ├── database.yml
+│   ├── environment.rb
+│   ├── environments
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   └── test.rb
+│   ├── initializers
+│   │   ├── inflections.rb
+│   │   ├── mime_types.rb
+│   │   └── secret_token.rb
+│   ├── locales
+│   │   └── en.yml
+│   └── routes.rb
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Rails Skeleton - /db</h2>
+<pre><code>
+├── db
+│   ├── development.sqlite3
+│   ├── migrate
+│   │   └── 20120816010724_....rb
+│   ├── schema.rb
+│   ├── seeds.rb
+│   └── test.sqlite3
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Rails Skeleton - /test</h2>
+<pre><code>
+├── test
+│   ├── factories.rb
+│   ├── fixtures
+│   ├── functional
+│   │   └── ..._test.rb
+│   ├── integration
+│   ├── performance
+│   ├── test_helper.rb
+│   └── unit
+│       ├── ..._test.rb
+│       └── helpers
+│           └── ..._helper_test.rb
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Tools &amp; Techniques</h2>
+          <ul>
+            <li><a href="https://rvm.io/">RVM</a> or <a href="http://rbenv.org/">rbenv</a></li>
+            <li><a href="http://gembundler.com/">Bundler</a></li>
+            <li>Rubygems, <a href="https://www.ruby-toolbox.com/">The Ruby Toolbox</a></li>
+            <li>Plugins, have generally fallen out of favor.</li>
+            <li>Testing frameworks, Test::Unit, Rspec, minitest, steak, cucumber</a></li>
+            <li><a href="http://rack.github.com/">Rack</a></li>
+            <li>&#8230;</li>
+          </ul>
+        </section>
 
         <!--
         <section>
@@ -51,6 +233,10 @@
         </section>
         -->
 
+        <section>
+          <h1>End</h1>
+          <img src="images/end_of_track.jpg"/>
+        </section>
       </div>
 
     </div>
@@ -68,7 +254,7 @@
         history: true,
         center: true,
 
-        theme: 'beige', // available themes are in /css/theme
+        theme: 'default', // available themes are in /css/theme
         transition: 'none', // default/cube/page/concave/zoom/linear/none
 
         // Optional libraries used to extend on reveal.js
